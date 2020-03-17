@@ -13,4 +13,22 @@
       <li>Hometown: <span id="hometown"></span></li>
     </ul>
   </body>
+  <script>
+    document.body.style.fontFamily = "Verdana, Arial, Helvetica, sans-serif";
+    
+    document.querySelector("#nickname").innerText = "Ashish";
+    document.querySelector("#favorites").innerText = "Travelling";
+    document.querySelector("#hometown").innerText = "Gwalior";
+
+    let li = document.querySelectorAll("li");
+    li.forEach(el => {
+      el.classList.add("listItems");
+      el.style.color = "red";
+    });
+
+    let image = document.createElement("img");
+    image.setAttribute("src","C:\Users\91913\Documents\altcampus\js_dom\assignments\DOM Basics\04\mincecraft.png");
+    image.style.width = "400px";
+    document.body.appendChild(image);
+</script>
 </html>

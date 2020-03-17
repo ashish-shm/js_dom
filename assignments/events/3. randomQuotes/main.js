@@ -1,4 +1,4 @@
-var quotes;
+
 
 // Write your code here
 
@@ -314,3 +314,21 @@ quotes = [
         "quoteText": "Great talent finds happiness in execution."
     }
 ];
+
+var quotes;
+
+let authortag = document.querySelector(".author");
+let quotetag = document.querySelector(".quote")
+
+document.addEventListener('keyup', randomquote);
+
+
+
+function randomquote(e){
+    if(e.keyCode == 32){
+        let index = Math.floor(Math.random() * quotes.length -1);
+        authortag.innerText = quotes[index].quoteAuthor;
+        quotetag.innerText  = quotes[index].quoteText;
+        
+    }
+}
